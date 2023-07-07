@@ -38,7 +38,7 @@ exports.post = ({ appSdk }, req, res) => {
     currency_symbol: params.currency_symbol,
     amount: amount.total,
     status: {
-      current: 'pending'
+      current: amount.total >= 1 ? 'pending' : 'paid'
     },
     flags: [
       'app-custom-payments'
