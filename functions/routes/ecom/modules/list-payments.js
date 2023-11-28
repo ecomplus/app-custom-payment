@@ -1,3 +1,5 @@
+const ecomUtils = require('@ecomplus/utils')
+
 exports.post = ({ appSdk }, req, res) => {
   const { params, application } = req.body
   const amount = params.amount || {}
@@ -7,6 +9,10 @@ exports.post = ({ appSdk }, req, res) => {
   // https://apx-mods.e-com.plus/api/v1/list_payments/response_schema.json?store_id=100
   const response = {
     payment_gateways: []
+  }
+  let disableDiscount = false
+  if (params.items && params.items.length && config.disable_discount_on_sale) {
+    disableDiscount = params.items.some(item => item.quantity > 0 && ecomUtils.onPromotion(item))
   }
 
   if (config.payment_options && config.payment_options.length) {
@@ -52,7 +58,7 @@ exports.post = ({ appSdk }, req, res) => {
           type: 'payment'
         }
 
-        if (!amount.discount || paymentOption.cumulative_discount !== false) {
+        if (!amount.discount || (paymentOption.cumulative_discount !== false && !disableDiscount)) {
           paymentGateway.discount = discount
           if (discount && discount.value > 0) {
             // calculate discount value

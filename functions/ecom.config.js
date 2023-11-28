@@ -232,6 +232,12 @@ const app = {
               title: 'Desconto cumulativo',
               description: 'Se a promoção poderá ser aplicada junto a cupons e campanhas de desconto'
             },
+            disable_discount_on_sale: {
+              type: 'boolean',
+              default: true,
+              title: 'Desabilitar desconto em produtos promocionais',
+              description: 'Se a promoção poderá ser desabilitada quando qualquer item do carrinho tiver desconto'
+            },
             min_amount: {
               type: 'integer',
               minimum: 1,
