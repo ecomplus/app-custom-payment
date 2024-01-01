@@ -236,7 +236,7 @@ const app = {
               type: 'boolean',
               default: true,
               title: 'Desabilitar desconto em produtos promocionais',
-              description: 'Se a promoção poderá ser desabilitada quando qualquer item do carrinho tiver desconto'
+              description: 'Se a regra de desconto deverá ser invalidada quando qualquer item do carrinho tiver preço promocional'
             },
             min_amount: {
               type: 'integer',
