@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/ecomplus/app-custom-payment/compare/v1.4.2...v1.5.0) (2024-01-01)
+
+
+### Features
+
+* **list-payments:** option to disable discount on carts with promotional items ([#103](https://github.com/ecomplus/app-custom-payment/issues/103)) ([a2c6272](https://github.com/ecomplus/app-custom-payment/commit/a2c6272ba64a1163a1e8c64326b025413628e994))
+
+
+### Bug Fixes
+
+* **deps:** update @ecomplus/application-sdk to v1.15.5 firestore ([5ba561a](https://github.com/ecomplus/app-custom-payment/commit/5ba561a4dc6b571abd402f88a48c87cb7ebd1847))
+* **deps:** update all non-major dependencies ([129731c](https://github.com/ecomplus/app-custom-payment/commit/129731caa4b60b7f9b00f213dc20a58a460501ca))
+* set transaction status paid by default for zero amount ([a9e89e1](https://github.com/ecomplus/app-custom-payment/commit/a9e89e1e3178856ec683442abc955fd1fbd4e59a))
+
 ### [1.4.2](https://github.com/ecomplus/application-starter/compare/v1.4.1...v1.4.2) (2021-03-12)
 
 
