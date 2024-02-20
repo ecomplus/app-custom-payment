@@ -35,7 +35,7 @@
   },
   "homepage": "https://github.com/ecomplus/app-custom-payment#readme",
   "dependencies": {
-    "dotenv": "^8.6.0",
+    "dotenv": "^16.4.5",
     "firebase-tools": "^9.23.3"
   },
   "devDependencies": {
